@@ -1,0 +1,13 @@
+version: "3.12"
+services:
+    speech-notebook:
+        container_name: ${PROJECT_NAME}-jupyter-speech
+        build: ./speech-notebook
+        command: sh /jupyter/run-jupyter.sh
+        volumes:
+            - ./speech-notebook:/jupyter
+        ports:
+            - 8888:8888
+        env_file:
+            - .env
+
