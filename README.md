@@ -5,10 +5,16 @@ cd docker-ml
 docker compose up --build
 ```
 
-## 
+##
+#### go to speech jupyter 
 ```
-localhost:8888
+localhost:8881
 ```
+#### go to topic model jupyter
+```
+localhost:8882
+```
+
 
 
 

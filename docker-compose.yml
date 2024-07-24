@@ -7,7 +7,19 @@ services:
         volumes:
             - ./speech-notebook:/jupyter
         ports:
-            - 8888:8888
+            - 8881:8888
         env_file:
             - .env
+
+    topic-model-notebook: 
+        container_name: ${PROJECT_NAME}-jupyter-topic-model
+        build: ./topic-model-notebook
+        command: sh /jupyter/run-jupyter.sh
+        volumes:
+            - ./topic-model-notebook:/jupyter
+        ports: 
+            - 8882:8888
+        env_file:
+            - .env
+
 
